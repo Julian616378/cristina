@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pa Cristina</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #fceff9, #f8d0e5);
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .bouquet {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            perspective: 1000px;
+        }
+
+        .rose {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transform-origin: bottom center;
+            animation: bloom 2s ease-in-out infinite alternate;
+        }
+
+        .rose-petals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .petal {
+            position: absolute;
+            background-color: #C41E3A;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .stem {
+            position: absolute;
+            width: 6px;
+            background-color: #2E8B57;
+            bottom: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 200px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .thorns {
+            position: absolute;
+            width: 100%;
+            height: 200px;
+        }
+
+        .thorn {
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            background-color: #1A5F2A;
+            transform: rotate(45deg);
+        }
+        
+        .title {
+            position: absolute;
+            top: 50px;
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: #d16db8;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+            animation: float 3s ease-in-out infinite alternate;
+            z-index: 10;
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0.7) rotate(-5deg);
+            }
+            100% {
+                transform: scale(1) rotate(5deg);
+            }
+        }
+
+        .rose:nth-child(1) { left: 50px; top: 250px; animation-delay: -0.5s; z-index: 6; }
+        .rose:nth-child(2) { right: 50px; top: 250px; animation-delay: -1s; z-index: 5; }
+        .rose:nth-child(3) { left: 120px; top: 200px; animation-delay: -1.5s; z-index: 4; }
+        .rose:nth-child(4) { right: 120px; top: 200px; animation-delay: -2s; z-index: 3; }
+        .rose:nth-child(5) { left: 190px; top: 150px; animation-delay: -2.5s; z-index: 2; }
+        .rose:nth-child(6) { right: 190px; top: 150px; animation-delay: -3s; z-index: 1; }
+    </style>
+</head>
+<body>
+
+    <div class="bouquet">
+        <div class="title">Unas flores con cariño pa la emo</div>
+    
+
+        <div class="rose">
+            <div class="rose-petals">
+                <div class="petal" style="top: 22%; left: 32%; width: 40px; height: 60px; transform: rotate(-48deg);"></div>
+                <div class="petal" style="top: 12%; left: 52%; width: 50px; height: 70px; transform: rotate(22deg);"></div>
+                <div class="petal" style="top: 32%; right: 32%; width: 40px; height: 60px; transform: rotate(48deg);"></div>
+                <div class="petal" style="top: 42%; left: 22%; width: 45px; height: 65px; transform: rotate(-32deg);"></div>
+                <div class="petal" style="top: 52%; right: 22%; width: 45px; height: 65px; transform: rotate(32deg);"></div>
+            </div>
+            <div class="stem">
+                <div class="thorns">
+                    <div class="thorn" style="bottom: 35px; left: 5px;"></div>
+                    <div class="thorn" style="bottom: 65px; right: 5px;"></div>
+                    <div class="thorn" style="bottom: 95px; left: 15px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rose">
+            <div class="rose-petals">
+                <div class="petal" style="top: 25%; left: 35%; width: 40px; height: 60px; transform: rotate(-45deg);"></div>
+                <div class="petal" style="top: 15%; left: 55%; width: 50px; height: 70px; transform: rotate(20deg);"></div>
+                <div class="petal" style="top: 35%; right: 35%; width: 40px; height: 60px; transform: rotate(45deg);"></div>
+                <div class="petal" style="top: 45%; left: 25%; width: 45px; height: 65px; transform: rotate(-30deg);"></div>
+                <div class="petal" style="top: 55%; right: 25%; width: 45px; height: 65px; transform: rotate(30deg);"></div>
+            </div>
+            <div class="stem">
+                <div class="thorns">
+                    <div class="thorn" style="bottom: 40px; left: 0;"></div>
+                    <div class="thorn" style="bottom: 70px; right: 0;"></div>
+                    <div class="thorn" style="bottom: 100px; left: 10px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rose">
+            <div class="rose-petals">
+                <div class="petal" style="top: 28%; left: 38%; width: 40px; height: 60px; transform: rotate(-42deg);"></div>
+                <div class="petal" style="top: 18%; left: 58%; width: 50px; height: 70px; transform: rotate(18deg);"></div>
+                <div class="petal" style="top: 38%; right: 38%; width: 40px; height: 60px; transform: rotate(42deg);"></div>
+                <div class="petal" style="top: 48%; left: 28%; width: 45px; height: 65px; transform: rotate(-28deg);"></div>
+                <div class="petal" style="top: 58%; right: 28%; width: 45px; height: 65px; transform: rotate(28deg);"></div>
+            </div>
+            <div class="stem">
+                <div class="thorns">
+                    <div class="thorn" style="bottom: 45px; left: 8px;"></div>
+                    <div class="thorn" style="bottom: 75px; right: 8px;"></div>
+                    <div class="thorn" style="bottom: 105px; left: 18px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="rose">
+            <div class="rose-petals">
+                <div class="petal" style="top: 28%; left: 38%; width: 40px; height: 60px; transform: rotate(-42deg);"></div>
+                <div class="petal" style="top: 18%; left: 58%; width: 50px; height: 70px; transform: rotate(18deg);"></div>
+                <div class="petal" style="top: 38%; right: 38%; width: 40px; height: 60px; transform: rotate(42deg);"></div>
+                <div class="petal" style="top: 48%; left: 28%; width: 45px; height: 65px; transform: rotate(-28deg);"></div>
+                <div class="petal" style="top: 58%; right: 28%; width: 45px; height: 65px; transform: rotate(28deg);"></div>
+            </div>
+            <div class="stem">
+                <div class="thorns">
+                    <div class="thorn" style="bottom: 45px; left: 8px;"></div>
+                    <div class="thorn" style="bottom: 75px; right: 8px;"></div>
+                    <div class="thorn" style="bottom: 105px; left: 18px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="rose">
+            <div class="rose-petals">
+                <div class="petal" style="top: 28%; left: 38%; width: 40px; height: 60px; transform: rotate(-42deg);"></div>
+                <div class="petal" style="top: 18%; left: 58%; width: 50px; height: 70px; transform: rotate(18deg);"></div>
+                <div class="petal" style="top: 38%; right: 38%; width: 40px; height: 60px; transform: rotate(42deg);"></div>
+                <div class="petal" style="top: 48%; left: 28%; width: 45px; height: 65px; transform: rotate(-28deg);"></div>
+                <div class="petal" style="top: 58%; right: 28%; width: 45px; height: 65px; transform: rotate(28deg);"></div>
+            </div>
+            <div class="stem">
+                <div class="thorns">
+                    <div class="thorn" style="bottom: 45px; left: 8px;"></div>
+                    <div class="thorn" style="bottom: 75px; right: 8px;"></div>
+                    <div class="thorn" style="bottom: 105px; left: 18px;"></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
